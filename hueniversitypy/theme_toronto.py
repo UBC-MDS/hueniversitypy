@@ -1,6 +1,7 @@
 def theme_toronto(palette='cool'):
     """ 
     Applies a University of Toronto theme to all subsequential altair plot objects so they are displayed with the U of T visual identity. 
+    See the visual identity at https://tinyurl.com/t3jjr49
     Three palettes based on the U of T visual identity guidelines can be selected: 'cool', 'vibrant' and 'awards'. 
 	
     Parameters
