@@ -1,6 +1,6 @@
 ## HueniversityPy 
 
-![](https://github.com/vermashivam679/hueniversitypy/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/vermashivam679/hueniversitypy/branch/master/graph/badge.svg)](https://codecov.io/gh/vermashivam679/hueniversitypy) ![Release](https://github.com/vermashivam679/hueniversitypy/workflows/Release/badge.svg)
+![](https://github.com/UBC-MDS/hueniversitypy/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/UBC-MDS/hueniversitypy/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/hueniversitypy) ![Release](https://github.com/UBC-MDS/hueniversitypy/workflows/Release/badge.svg)
 
 [![Documentation Status](https://readthedocs.org/projects/hueniversitypy/badge/?version=latest)](https://hueniversitypy.readthedocs.io/en/latest/?badge=latest)
 
