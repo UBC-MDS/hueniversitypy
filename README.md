@@ -8,7 +8,7 @@ Python package for creating visualizations in line with visual identities of Can
 
 ### Summary
 
-A visual identity allows an organization to be instantly recognizable. Comprised of their logo, typeface, and colours, it is applied when creating external and internal communications. At universities, staff create visualizations that adhere to the colour palette specified by their institution's visual identity guidelines. For example, on the [*Students and Alumni*](https://masterdatascience.ubc.ca/why-ubc/students-alumni) page of UBC Master of Data Science website, the visualizations all adhere to the colour palette specified by the university's visual identity guideline. 
+A visual identity allows an organization to be instantly recognizable. Comprised of their logo, typeface, and colours, it is applied when creating external and internal communications. At universities, staff create visualizations that adhere to the colour palette specified by their institution's visual identity guidelines. For example, on the [*Students and Alumni*](https://masterdatascience.ubc.ca/why-ubc/students-alumni) page of UBC Master of Data Science website, the visualizations all adhere to the colour palette specified by UBC's visual identity guideline. 
 
 This Python package allows users to apply university-specific themes to altair plots. This package currently supports the official colour palettes of four institutions belonging to the U15 Group of Canadian Research Universities: University of Alberta, the University of British Columbia, McGill University, and the University of Toronto. In the future, we hope to extend this package to support the visual identities of all universities in the association.
 
@@ -21,14 +21,12 @@ The `hueniversitypy` package fits into the Python ecosystem alongisde other Pyth
 ```
 pip install -i https://test.pypi.org/simple/ hueniversitypy
 ```
-#### Functions used in the package
+
+### Features
 - `theme_alberta()` - creates visualizations in line with [the University of Alberta's visual identity](https://www.ualberta.ca/toolkit/visual-identity/our-colours)
 - `theme_mcgill()` - creates visualizations in line with [McGill University's visual identity](https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo)
 - `theme_toronto()` - creates visualizations in line with [the University of Toronto's visual identity](https://www.utm.utoronto.ca/communications/sites/files/communications/public/shared/UofT%20Style%20Guide%20%2B%20Boundless%20Guide%20Feb%202012.pdf)
 - `theme_ubc()` - creates visualizations in line with [the University of British Columbia's visual identity](https://brand.ubc.ca/guidelines/downloads/ubc-colour-and-fonts/)
-
-### Features
-- TODO
 
 ### Dependencies
 
