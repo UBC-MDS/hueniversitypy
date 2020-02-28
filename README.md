@@ -11,6 +11,11 @@ Python Package for Visualization by Themes for Canadian Universities
 ```
 pip install -i https://test.pypi.org/simple/ hueniversitypy
 ```
+#### Functions used in the package
+- theme_ubc()
+- theme_mcgill()
+- theme_calgary()
+- theme_alberta()
 
 ### Features
 - TODO
