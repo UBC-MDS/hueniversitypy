@@ -1,10 +1,14 @@
-## HueniversityPy 
+## hueniversitypy
 
 ![](https://github.com/UBC-MDS/hueniversitypy/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/UBC-MDS/hueniversitypy/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/hueniversitypy) ![Release](https://github.com/UBC-MDS/hueniversitypy/workflows/Release/badge.svg)
 
 [![Documentation Status](https://readthedocs.org/projects/hueniversitypy/badge/?version=latest)](https://hueniversitypy.readthedocs.io/en/latest/?badge=latest)
 
-Python Package for Visualization by Themes for Canadian Universities
+Python package for creating visualizations in line with visual identities of Canadian universities
+
+### Summary
+
+### `hueniversitypy` in the Python ecosystem
 
 ### Installation:
 
@@ -12,10 +16,10 @@ Python Package for Visualization by Themes for Canadian Universities
 pip install -i https://test.pypi.org/simple/ hueniversitypy
 ```
 #### Functions used in the package
-- theme_ubc()
-- theme_mcgill()
-- theme_calgary()
-- theme_alberta()
+- `theme_alberta()` - creates visualizations in line with [the University of Alberta's visual identity](https://www.ualberta.ca/toolkit/visual-identity/our-colours)
+- `theme_mcgill()` - creates visualizations in line with [McGill University's visual identity](https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo)
+- `theme_toronto()` - creates visualizations in line with [the University of Toronto's visual identity](https://www.utm.utoronto.ca/communications/sites/files/communications/public/shared/UofT%20Style%20Guide%20%2B%20Boundless%20Guide%20Feb%202012.pdf)
+- `theme_ubc()` - creates visualizations in line with [the University of British Columbia's visual identity](https://brand.ubc.ca/guidelines/downloads/ubc-colour-and-fonts/)
 
 ### Features
 - TODO
