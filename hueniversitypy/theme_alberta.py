@@ -1,6 +1,7 @@
 def theme_alberta(palette='alpha'):
     """ 
-    Applies a University of Alberta theme to all subsequential altair plot objects so they are displayed with the U of A visual identity. 
+    Applies a University of Alberta theme to all subsequential altair plot objects so they are displayed with the U of A visual identity.
+    See the visual identity at https://www.ualberta.ca/toolkit/visual-identity/our-colours. 
     Four palettes based on the U of A visual identity guidelines can be selected: 'alpha', 'beta', 'gamma' and 'delta'.
 	
     Parameters
