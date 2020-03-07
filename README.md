@@ -52,7 +52,7 @@ Input:
 ```
 Available palettes:
 
-<img src="imgs/alberta_1.png" width="33%" />
+<img src="imgs/alberta_1.JPG" width="33%" />
 
 Output:
 
@@ -88,7 +88,7 @@ Input:
 
 Available palettes:
 
-<img src="imgs/toronto_vibrant.png" width="25%" />
+<img src="imgs/toronto_vibrant.PNG" width="25%" />
 
 Output:
 
