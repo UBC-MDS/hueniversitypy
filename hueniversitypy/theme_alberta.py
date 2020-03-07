@@ -18,5 +18,5 @@ def theme_alberta(palette='alpha'):
     ----------
     >>> alt.themes.register('theme_alberta', theme_alberta)
     >>> alt.themes.enable('theme_alberta')
-    
+
     """
