@@ -3,11 +3,7 @@ def theme_toronto():
     Applies a University of Toronto theme to all subsequential altair plot objects so they are displayed with the U of T visual identity. 
     See the visual identity at https://tinyurl.com/t3jjr49
     Three palettes based on the U of T visual identity guidelines can be selected: 'cool', 'vibrant' and 'awards'. 
-	
-    Parameters
-    ----------
-    palette : 'cool', 'vibrant' or 'awards'
-    	specifies which colour palette defined in the visual identity documentation is used. 
+
 	
     Returns
     -------
@@ -19,10 +15,13 @@ def theme_toronto():
     >>> alt.themes.register('theme_toronto', theme_toronto)
     >>> alt.themes.enable('theme_toronto')
 
-    attribution to Sergio Sanchez 
-    https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
     
     """
+    
+    # attribution to Sergio Sanchez 
+    # https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
+
+
     # note U of T fonts are not open source, so most comprable fonts have been used for this package
     font = "Tahoma"
     # note U of T fonts are not open source, so most comprable fonts have been used for this package
