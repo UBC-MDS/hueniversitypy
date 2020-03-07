@@ -19,7 +19,7 @@ def theme_ubc():
     font = "Arial"
     labelFont = "Arial" 
     # Colors
-    main_palette = ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9']
+    ubc_palette = ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9']
 
     return {
         "config": {
@@ -47,7 +47,7 @@ def theme_ubc():
 
             "range": {
                 
-                "category": main_palette,
+                "category": ubc_palette,
             }
         }
     }
