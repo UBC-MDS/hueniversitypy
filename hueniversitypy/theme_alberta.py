@@ -1,4 +1,4 @@
-def theme_alberta(palette='alpha'):
+def theme_alberta():
     """ 
     Applies a University of Alberta theme to all subsequential altair plot objects so they are displayed with the U of A visual identity.
     See the visual identity at https://www.ualberta.ca/toolkit/visual-identity/our-colours. 
@@ -17,16 +17,10 @@ def theme_alberta(palette='alpha'):
     """
     
     # Code attribution: Sergio Sanchez
-    https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
+    # https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
 
     font = "Arial"
-    
     labelFont = "Arial"
-    sourceFont = "Arial"
-
-    # Axis colours
-    axisColor = "#000000"
-    gridColor = "#DEDDDD"
 
     # Specify colour palette for Alberta
     alberta_palette = ["#007C41", "#FFDB05", "#7D9AAA", "#A8B400", "#A79E70"]
