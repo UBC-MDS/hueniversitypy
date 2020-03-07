@@ -18,13 +18,13 @@ def test_chart_object():
     alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
     
-    assert str(type(test_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
+    assert str(type(ubc_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
     ''' A function that tests the correct colours an imported into the 
@@ -39,13 +39,13 @@ def test_colours():
     alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
      
-    plot_dict = test_plot.to_dict()
+    plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['range']['category'] == ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9']
     
 def test_font_type():
@@ -61,13 +61,13 @@ def test_font_type():
     alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
      
-    plot_dict = test_plot.to_dict()
+    plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['title']['font'] == 'Arial'
     assert plot_dict['config']['axisX']['labelFont'] == 'Arial'
     assert plot_dict['config']['axisX']['titleFont'] == 'Arial'
@@ -87,13 +87,13 @@ def test_font_size():
     alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
      
-    plot_dict = test_plot.to_dict()
+    plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['title']['fontSize'] == 18
     assert plot_dict['config']['axisX']['labelFontSize'] == 12
     assert plot_dict['config']['axisX']['titleFontSize'] == 12
