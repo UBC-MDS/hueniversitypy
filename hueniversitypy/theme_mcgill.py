@@ -13,9 +13,11 @@ def theme_mcgill():
     >>> alt.themes.register('theme_mcgill', theme_mcgill)
     >>> alt.themes.enable('theme_mcgill')
 
-    attribution to Sergio Sanchez 
-    https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
     """
+
+    #attribution to Sergio Sanchez 
+    #https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
+    
 
     # Univeristy font
     font = "Lato"
