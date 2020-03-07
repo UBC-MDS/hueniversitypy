@@ -14,12 +14,11 @@ def theme_mcgill():
     >>> alt.themes.enable('theme_mcgill')
 
     """
-
     #attribution to Sergio Sanchez 
     #https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
-    
 
-    # Univeristy font
+
+    # University font
     font = "Lato"
     labelFont = "Lato" 
     sourceFont = "Lato"
@@ -42,13 +41,16 @@ def theme_mcgill():
                 "labelFont": labelFont,
                 "labelFontSize": 12,
                 "title": "X Axis Title (units)", 
-		"titleFontSize": 12
-            },
+                "titleFont": font,
+                "titleFontSize": 12
+             },
             "axisY": {
                 "labelFont": labelFont,
                 "labelFontSize": 12,
                 "title": "Y Axis Title (units)", 
-		"titleFontSize": 12
+                "titleFont": font,
+                "titleFontSize": 12
+
             },
              # Adding colour palette
             "range": {
