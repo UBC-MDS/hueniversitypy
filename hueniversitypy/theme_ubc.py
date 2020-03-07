@@ -18,9 +18,6 @@ def theme_ubc():
 
     font = "Arial"
     labelFont = "Arial" 
-    # Axes
-    axisColor = "#000000"
-    gridColor = "#DEDDDD"
     # Colors
     main_palette = ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9']
 
