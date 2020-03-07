@@ -20,19 +20,19 @@ test_plot = alt.Chart(data).mark_point().encode(
     color='variable',
 ).properties(title = 'Test')
 
-def test_chart_object(plot=test_plot):
+def test_chart_object(test_plot=test_plot):
     ''' A function that tests if an altair chart object is created  '''
     
     assert str(type(test_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
-def test_colours(plot=test_plot):
+def test_colours(test_plot=test_plot):
     ''' A function that tests the correct colours an imported into the 
     altair chart based on the theme'''
     
     plot_dict = test_plot.to_dict()
     assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD']
     
-def test_font_type(plot=test_plot):
+def test_font_type(test_plot=test_plot):
     ''' A function that tests the correct fonts are imported into the 
     altair chart based on the theme'''
     
@@ -43,7 +43,7 @@ def test_font_type(plot=test_plot):
     assert plot_dict['config']['axisY']['labelFont'] == 'Tahoma'
     assert plot_dict['config']['axisY']['titleFont'] == 'Tahoma'
     
-def test_font_size(plot=test_plot):
+def test_font_size(test_plot=test_plot):
     ''' A function that tests the correct fonts sizes are used in the 
     altair chart based on the theme'''
     
