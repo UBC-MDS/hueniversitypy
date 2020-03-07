@@ -1,7 +1,7 @@
 def theme_mcgill():
     """ 
     Applies McGill University's theme to all subsequential altair plot objects so they are displayed with the McGill visual identity.
-    See the visual identity at https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo
+    See the visual identity at https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo. The 
      
     Returns
     -------
@@ -12,9 +12,12 @@ def theme_mcgill():
     ----------
     >>> alt.themes.register('theme_mcgill', theme_mcgill)
     >>> alt.themes.enable('theme_mcgill')
+
+    attribution to Sergio Sanchez 
+    https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
     """
 
-    # Typography
+    # Univeristy font
     font = "Lato"
     labelFont = "Lato" 
     sourceFont = "Lato"
@@ -37,11 +40,13 @@ def theme_mcgill():
                 "labelFont": labelFont,
                 "labelFontSize": 12,
                 "title": "X Axis Title (units)", 
+		"titleFontSize": 12
             },
             "axisY": {
                 "labelFont": labelFont,
                 "labelFontSize": 12,
                 "title": "Y Axis Title (units)", 
+		"titleFontSize": 12
             },
              # Adding colour palette
             "range": {
@@ -53,3 +58,4 @@ def theme_mcgill():
     alt.themes.register("theme_mcGill", theme_mcgill)
     alt.themes.enable("theme_mcGill")
 
+    
