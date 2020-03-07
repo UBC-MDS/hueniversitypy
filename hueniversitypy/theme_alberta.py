@@ -13,8 +13,10 @@ def theme_alberta(palette='alpha'):
     -------
     altair plot : altair.vegalite.v4.api.Chart
     	an altair plot with the U of A visual identity colour theme applied. 
+
     Example
     ----------
     >>> alt.themes.register('theme_alberta', theme_alberta)
     >>> alt.themes.enable('theme_alberta')
+    
     """
