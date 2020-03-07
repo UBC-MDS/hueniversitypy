@@ -30,11 +30,90 @@ pip install -i https://test.pypi.org/simple/ hueniversitypy
 
 ### Dependencies
 
-- TODO
+pandas==0.24.2
+altair==3.2.0 
 
 ### Usage
 
-- TODO
+Start by importing the following packages:
+
+```
+import pandas as pd
+import altair as alt
+```
+
+### `theme_alberta()`
+
+Input:
+
+```
+    alt.themes.register("theme_alberta", theme_alberta)
+    alt.themes.enable("theme_alberta")
+```
+Available palettes:
+
+<img src="imgs/alberta_1.png" width="33%" />
+
+Output:
+
+  - No direct output, however for every subsequent altair object in the script or .ipynb file the theme will be in line with [the University of Alberta’s visual identity](https://www.ualberta.ca/toolkit/visual-identity/our-colours)
+
+
+### `theme_mcgill()`
+
+Input:
+
+```
+    alt.themes.register("theme_mcgill", theme_mcgill)
+    alt.themes.enable("theme_mcgill")
+```
+
+Available palette:
+
+<img src="imgs/mcgill.png" width="33%" />
+
+Output:
+
+  - No direct output, however for every subsequent altair object in the script or .ipynb file the theme will be in line with [McGill University’s visual identity](https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo)
+
+
+### `theme_toronto()`
+
+Input:
+
+```
+    alt.themes.register("theme_toronto", theme_toronto)
+    alt.themes.enable("theme_toronto")
+```
+
+Available palettes:
+
+<img src="imgs/toronto_vibrant.png" width="25%" />
+
+Output:
+
+  - No direct output, however for every subsequent altair object in the script or .ipynb file the theme will be in line with [the University of Toronto’s visual identity](https://www.utm.utoronto.ca/communications/sites/files/communications/public/shared/UofT%20Style%20Guide%20%2B%20Boundless%20Guide%20Feb%202012.pdf)
+
+
+### `theme_ubc()`
+
+Input:
+
+```
+    alt.themes.register("theme_ubc", theme_ubc)
+    alt.themes.enable("theme_ubc")
+```
+
+Available palette:
+
+<img src="imgs/ubc.png" width="40%" />
+
+Output:
+
+  - No direct output, however for every subsequent altair object in the script or .ipynb file the theme will be in line with [the University of British Columbia’s
+    visual
+    identity](https://brand.ubc.ca/guidelines/downloads/ubc-colour-and-fonts/)
+
 
 ### Documentation
 The official documentation is hosted on Read the Docs: <https://hueniversitypy.readthedocs.io/en/latest/>
