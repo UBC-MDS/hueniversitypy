@@ -1,8 +1,8 @@
 import pandas as pd
 import altair as alt
 
-# import theme_toronto.py file with functions. 
-from hueniversitypy.theme_toronto import *
+# import theme_ubc.py file with functions. 
+from hueniversitypy.theme_ubc import *
 
 # creating data to plot for tests
 
@@ -14,17 +14,17 @@ def test_chart_object():
                      'C':[3, 6, 3, 5, 8, 2, 8] }))
 
     # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
+    alt.themes.register("theme_ubc", theme_ubc)
+    alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
-
-    assert str(type(test_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
+    
+    assert str(type(ubc_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
     ''' A function that tests the correct colours an imported into the 
@@ -35,19 +35,18 @@ def test_colours():
                      'C':[3, 6, 3, 5, 8, 2, 8] }))
 
     # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
+    alt.themes.register("theme_ubc", theme_ubc)
+    alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
-
-    
-    plot_dict = test_plot.to_dict()
-    assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD']
+     
+    plot_dict = ubc_plot.to_dict()
+    assert plot_dict['config']['range']['category'] == ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9']
     
 def test_font_type():
     ''' A function that tests the correct fonts are imported into the 
@@ -58,23 +57,22 @@ def test_font_type():
                      'C':[3, 6, 3, 5, 8, 2, 8] }))
 
     # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
+    alt.themes.register("theme_ubc", theme_ubc)
+    alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
-
-    
-    plot_dict = test_plot.to_dict()
-    assert plot_dict['config']['title']['font'] == 'Tahoma'
-    assert plot_dict['config']['axisX']['labelFont'] == 'Tahoma'
-    assert plot_dict['config']['axisX']['titleFont'] == 'Tahoma'
-    assert plot_dict['config']['axisY']['labelFont'] == 'Tahoma'
-    assert plot_dict['config']['axisY']['titleFont'] == 'Tahoma'
+     
+    plot_dict = ubc_plot.to_dict()
+    assert plot_dict['config']['title']['font'] == 'Arial'
+    assert plot_dict['config']['axisX']['labelFont'] == 'Arial'
+    assert plot_dict['config']['axisX']['titleFont'] == 'Arial'
+    assert plot_dict['config']['axisY']['labelFont'] == 'Arial'
+    assert plot_dict['config']['axisY']['titleFont'] == 'Arial'
     
 def test_font_size():
     ''' A function that tests the correct fonts sizes are used in the 
@@ -85,18 +83,17 @@ def test_font_size():
                      'C':[3, 6, 3, 5, 8, 2, 8] }))
 
     # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
+    alt.themes.register("theme_ubc", theme_ubc)
+    alt.themes.enable("theme_ubc")
 
     # creating plot for testing with theme
-    test_plot = alt.Chart(data).mark_point().encode(
+    ubc_plot = alt.Chart(data).mark_point().encode(
         x='count()',
         y='value',
         color='variable',
     ).properties(title='Test')
-
-    
-    plot_dict = test_plot.to_dict()
+     
+    plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['title']['fontSize'] == 18
     assert plot_dict['config']['axisX']['labelFontSize'] == 12
     assert plot_dict['config']['axisX']['titleFontSize'] == 12
