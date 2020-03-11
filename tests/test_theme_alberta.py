@@ -4,14 +4,14 @@ import altair as alt
 # Import theme_alberta.py
 from hueniversitypy.theme_alberta import *
 
+# Create toy dataframe to plot 
+data = pd.melt(pd.DataFrame({"A": [1, 86, 62, 29, 16, 42, 69],
+                         "B": [21, 41, 97, 14, 75, 7, 32],
+                         "C": [57, 90, 98, 67, 9, 46, 87]}))
+
 def test_chart_object_alberta():
     """ Test whether a chart object has been created"""
     
-    # Create toy dataframe to plot 
-    data = pd.melt(pd.DataFrame({"A": [1, 86, 62, 29, 16, 42, 69],
-                             "B": [21, 41, 97, 14, 75, 7, 32],
-                             "C": [57, 90, 98, 67, 9, 46, 87]}))
-
     # Call the theme to apply themes to all subsequent plots
     alt.themes.register("theme_alberta", theme_alberta)
     alt.themes.enable("theme_alberta")
@@ -27,11 +27,6 @@ def test_chart_object_alberta():
 
 def test_colours_alberta():
     """ Test whether the correct colour palette is applied to the chart object"""
-    
-    # Create toy dataframe to plot 
-    data = pd.melt(pd.DataFrame({"A": [1, 86, 62, 29, 16, 42, 69],
-                             "B": [21, 41, 97, 14, 75, 7, 32],
-                             "C": [57, 90, 98, 67, 9, 46, 87]}))
 
     # Call the theme to apply themes to all subsequent plots
     alt.themes.register("theme_alberta", theme_alberta)
@@ -49,11 +44,6 @@ def test_colours_alberta():
 
 def test_font_type_alberta():
     """Test whether the correct font is applied to the chart object"""
-    
-    # Create toy dataframe to plot 
-    data = pd.melt(pd.DataFrame({"A": [1, 86, 62, 29, 16, 42, 69],
-                             "B": [21, 41, 97, 14, 75, 7, 32],
-                             "C": [57, 90, 98, 67, 9, 46, 87]}))
 
     # Call the theme to apply themes to all subsequent plots
     alt.themes.register("theme_alberta", theme_alberta)
@@ -75,11 +65,6 @@ def test_font_type_alberta():
 
 def test_font_size_alberta():
     """Test whether the correct fonts sizes are applied to the chart object"""
-    # Create toy dataframe to plot 
-    
-    data = pd.melt(pd.DataFrame({"A": [1, 86, 62, 29, 16, 42, 69],
-                             "B": [21, 41, 97, 14, 75, 7, 32],
-                             "C": [57, 90, 98, 67, 9, 46, 87]}))
 
     # Call the theme to apply themes to all subsequent plots
     alt.themes.register("theme_alberta", theme_alberta)
@@ -99,3 +84,42 @@ def test_font_size_alberta():
     assert plot_dict['config']['axisY']['labelFontSize'] == 12
     assert plot_dict['config']['axisY']['titleFontSize'] == 12
     
+def wrong_colour():
+    ''' A function that checks if the correct colours are used,
+    shoud fail'''
+    
+    # Call the theme to apply themes to all subsequent plots
+    alt.themes.register("theme_alberta", theme_alberta)
+    alt.themes.enable("theme_alberta")
+
+    # Create plot for testing
+    alberta_plot = alt.Chart(data).mark_point().encode(
+        x="count()",
+        y="value",
+        color="variable"
+    ).properties(title="Test")
+
+    plot_dict = alberta_plot.to_dict()
+    assert plot_dict['config']['range']['category'] != ["#007C41", "#FFDB05", "#7D9AAA", "#A8B400", "#A79E70"], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+    
+def wrong_font():
+    ''' A function that tests the if correct fonts are used,
+    shoud fail'''
+    
+    # Call the theme to apply themes to all subsequent plots
+    alt.themes.register("theme_alberta", theme_alberta)
+    alt.themes.enable("theme_alberta")
+
+    # Create plot for testing
+    alberta_plot = alt.Chart(data).mark_point().encode(
+        x="count()",
+        y="value",
+        color="variable"
+    ).properties(title="Test")
+
+    plot_dict = alberta_plot.to_dict()
+    assert plot_dict['config']['title']['font'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+    assert plot_dict['config']['axisX']['labelFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+    assert plot_dict['config']['axisX']['titleFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+    assert plot_dict['config']['axisY']['labelFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+    assert plot_dict['config']['axisY']['titleFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
