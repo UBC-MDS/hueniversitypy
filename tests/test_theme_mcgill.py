@@ -10,7 +10,7 @@ data = pd.melt(pd.DataFrame({'A': [1, 4, 6, 8, 3, 6, 7],
                  'C':[3, 6, 3, 5, 8, 2, 8] }))
 
 # creating test plot
-test_plot = alt.Chart(data).mark_point().encode(
+mcgill_plot = alt.Chart(data).mark_point().encode(
     x='count()',
     y='value',
     color='variable',
@@ -24,7 +24,7 @@ def test_chart_object():
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
 
-    assert str(type(test_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
+    assert str(type(mcgill_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
     ''' A function that tests the correct colours an imported into the 
@@ -33,7 +33,7 @@ def test_colours():
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
     
-    plot_dict = test_plot.to_dict()
+    plot_dict = mcgill_plot.to_dict()
     assert plot_dict['config']['range']['category'] == ["#ED1B2F","#FFD794","#B5E1E1","#C8EAF5","#D5E6A8"]
     
 def test_font_type():
@@ -44,7 +44,7 @@ def test_font_type():
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
     
-    plot_dict = test_plot.to_dict()
+    plot_dict = mcgill_plot.to_dict()
     assert plot_dict['config']['title']['font'] == 'Lato'
     assert plot_dict['config']['axisX']['labelFont'] == 'Lato'
     assert plot_dict['config']['axisX']['titleFont'] == 'Lato' 
@@ -58,7 +58,7 @@ def test_font_size():
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
     
-    plot_dict = test_plot.to_dict()
+    plot_dict = mcgill_plot.to_dict()
     assert plot_dict['config']['title']['fontSize'] == 18
     assert plot_dict['config']['axisX']['labelFontSize'] == 12
     assert plot_dict['config']['axisX']['titleFontSize'] == 12
@@ -72,7 +72,7 @@ def wrong_colour():
     alt.themes.register("theme_toronto", theme_toronto)
     alt.themes.enable("theme_toronto")
     
-    plot_dict = test_plot.to_dict()
+    plot_dict = mcgill_plot.to_dict()
     assert plot_dict['config']['range']['category'] != ["#ED1B2F","#FFD794","#B5E1E1","#C8EAF5","#D5E6A8"], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
     
 def wrong_font():
@@ -83,7 +83,7 @@ def wrong_font():
     alt.themes.register("theme_toronto", theme_toronto)
     alt.themes.enable("theme_toronto")
 
-    plot_dict = test_plot.to_dict()
+    plot_dict = mcgill_plot.to_dict()
     assert plot_dict['config']['title']['font'] != 'Lato', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
     assert plot_dict['config']['axisX']['labelFont'] != 'Lato', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
     assert plot_dict['config']['axisX']['titleFont'] != 'Lato', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
