@@ -3,6 +3,7 @@ import altair as alt
 
 # import theme_ubc.py file with functions. 
 from hueniversitypy.theme_ubc import *
+from hueniversitypy.theme_mcgill import *
 
 # creating data to plot for tests
 data = pd.melt(pd.DataFrame({'A': [1, 4, 6, 8, 3, 6, 7], 
@@ -69,6 +70,9 @@ def test_font_size():
 def wrong_colour():
     ''' A function that checks if the correct colours are used from UBC theme,
     shoud fail'''
+
+    alt.themes.register("theme_mcgill", theme_mcgill)
+    alt.themes.enable("theme_mcgill")
      
     plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['range']['category'] != ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'
@@ -76,6 +80,9 @@ def wrong_colour():
 def wrong_font():
     ''' A function that tests the if correct fonts are used from UBC theme,
     shoud fail'''
+
+    alt.themes.register("theme_mcgill", theme_mcgill)
+    alt.themes.enable("theme_mcgill")
 
     plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['title']['font'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'

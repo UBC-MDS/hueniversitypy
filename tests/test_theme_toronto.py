@@ -3,6 +3,7 @@ import altair as alt
 
 # import theme_toronto.py file with functions. 
 from hueniversitypy.theme_toronto import *
+from hueniversitypy.theme_mcgill import *
 
 # creating data to plot for tests
 data = pd.melt(pd.DataFrame({'A': [1, 4, 6, 8, 3, 6, 7], 
@@ -71,6 +72,9 @@ def test_font_size():
 def wrong_colour():
     ''' A function that checks if the correct colours are used,
     shoud fail'''
+
+    alt.themes.register("theme_mcgill", theme_mcgill)
+    alt.themes.enable("theme_mcgill")
     
     plot_dict = test_plot.to_dict()
     assert plot_dict['config']['range']['category'] != ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
@@ -78,6 +82,9 @@ def wrong_colour():
 def wrong_font():
     ''' A function that tests the if correct fonts are used,
     shoud fail'''
+
+    alt.themes.register("theme_mcgill", theme_mcgill)
+    alt.themes.enable("theme_mcgill")
 
     plot_dict = test_plot.to_dict()
     assert plot_dict['config']['title']['font'] != 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
