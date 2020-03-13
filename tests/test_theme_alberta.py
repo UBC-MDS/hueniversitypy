@@ -26,7 +26,7 @@ def test_chart_object_alberta():
     assert str(type(alberta_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
 
 def test_colours_alberta():
-    """ A function that tests if an altair chart has colous imported from the University of Alberta's theme applied to it 
+    """ A function that tests if an altair chart has colours imported from the University of Alberta's theme applied to it 
     adhering to the university's visual identity"""
 
     # Call the theme to apply themes to all subsequent plots
