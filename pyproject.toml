@@ -11,6 +11,8 @@ altair = "^4.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest-cov = "^2.8.1"
+sphinx = "^2.4.4"
+sphinxcontrib-napoleon = "^0.7"
 
 [build-system]
 requires = ["poetry>=0.12"]

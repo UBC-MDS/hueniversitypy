@@ -27,8 +27,8 @@ def test_chart_object():
     assert str(type(mcgill_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
-    ''' A function that tests the correct colours an imported into the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has colours imported from the McGill theme applied to it 
+    adhering to the university's visual identity'''
     
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
@@ -38,8 +38,8 @@ def test_colours():
     
 def test_font_type():
     #
-    ''' A function that tests the correct fonts are imported into the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has font type imported from the McGill theme applied to it 
+    adhering to the university's visual identity'''
     
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
@@ -52,8 +52,8 @@ def test_font_type():
     assert plot_dict['config']['axisY']['titleFont'] == 'Lato'
     
 def test_font_size():
-    ''' A function that tests the correct fonts sizes are used in the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has font size imported from the McGill theme applied to it 
+    adhering to the university's visual identity'''
     
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
@@ -83,4 +83,3 @@ def wrong_font():
     assert plot_dict['config']['axisY']['labelFont'] != 'Lato', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
     assert plot_dict['config']['axisY']['titleFont'] != 'Lato', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
     
-
