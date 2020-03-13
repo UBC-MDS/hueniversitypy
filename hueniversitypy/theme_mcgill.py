@@ -59,7 +59,5 @@ def theme_mcgill():
             }
     }
     }
-    alt.themes.register("theme_mcGill", theme_mcgill)
-    alt.themes.enable("theme_mcGill")
 
     
