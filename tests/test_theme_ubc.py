@@ -69,10 +69,6 @@ def test_font_size():
 def wrong_colour():
     ''' A function that checks if the correct colours are used,
     shoud fail'''
-    
-    # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_ubc", theme_ubc)
-    alt.themes.enable("theme_ubc")
      
     plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['range']['category'] != ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'
@@ -80,10 +76,6 @@ def wrong_colour():
 def wrong_font():
     ''' A function that tests the if correct fonts are used,
     shoud fail'''
-    
-    # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_ubc", theme_ubc)
-    alt.themes.enable("theme_ubc")
 
     plot_dict = ubc_plot.to_dict()
     assert plot_dict['config']['title']['font'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'
