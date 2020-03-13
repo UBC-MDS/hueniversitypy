@@ -18,6 +18,7 @@ jobs:
       env:
         POETRY_VIRTUALENVS_CREATE: false
       run: |
+        pip install pytest
         pip install poetry
         poetry install
     - name: Check style
