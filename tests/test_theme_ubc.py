@@ -26,7 +26,7 @@ def test_chart_object():
     assert str(type(ubc_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
-    ''' A function that tests if an altair chart has colous imported from the UBC theme applied to it 
+    ''' A function that tests if an altair chart has colours imported from the UBC theme applied to it 
     adhering to the university's visual identity'''
 
     # call the theme function to enforce themes on all subsequent plots 
@@ -91,4 +91,3 @@ def wrong_font():
     assert plot_dict['config']['axisX']['titleFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'
     assert plot_dict['config']['axisY']['labelFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'
     assert plot_dict['config']['axisY']['titleFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'
-
