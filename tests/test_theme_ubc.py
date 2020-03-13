@@ -26,8 +26,8 @@ def test_chart_object():
     assert str(type(ubc_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
-    ''' A function that tests the correct colours an imported into the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has colous imported from the UBC theme applied to it 
+    adhering to the university's visual identity'''
 
     # call the theme function to enforce themes on all subsequent plots 
     alt.themes.register("theme_ubc", theme_ubc)
@@ -37,8 +37,8 @@ def test_colours():
     assert plot_dict['config']['range']['category'] == ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9']
     
 def test_font_type():
-    ''' A function that tests the correct fonts are imported into the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has font type imported from the UBC theme applied to it 
+    adhering to the university's visual identity'''
 
     # call the theme function to enforce themes on all subsequent plots 
     alt.themes.register("theme_ubc", theme_ubc)
@@ -52,8 +52,8 @@ def test_font_type():
     assert plot_dict['config']['axisY']['titleFont'] == 'Arial'
     
 def test_font_size():
-    ''' A function that tests the correct fonts sizes are used in the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has font size imported from the UBC theme applied to it 
+    adhering to the university's visual identity'''
 
     # call the theme function to enforce themes on all subsequent plots 
     alt.themes.register("theme_ubc", theme_ubc)
@@ -67,7 +67,7 @@ def test_font_size():
     assert plot_dict['config']['axisY']['titleFontSize'] == 12
     
 def wrong_colour():
-    ''' A function that checks if the correct colours are used,
+    ''' A function that checks if the correct colours are used from UBC theme,
     shoud fail'''
     
     # call the theme function to enforce themes on all subsequent plots 
@@ -78,7 +78,7 @@ def wrong_colour():
     assert plot_dict['config']['range']['category'] != ['#002145', '#0055B7', '#00A7E1', '#40B4E5', '#6EC4E8', '#97D4E9'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_ubc", theme_ubc) \n>>> alt.themes.enable("theme_ubc")'
     
 def wrong_font():
-    ''' A function that tests the if correct fonts are used,
+    ''' A function that tests the if correct fonts are used from UBC theme,
     shoud fail'''
     
     # call the theme function to enforce themes on all subsequent plots 

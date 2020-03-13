@@ -26,8 +26,8 @@ def test_chart_object():
     assert str(type(test_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
-    ''' A function that tests the correct colours an imported into the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has colous imported from the U of T theme applied to it 
+    adhering to the university's visual identity'''
 
     # call the theme function to enforce themes on all subsequent plots 
     alt.themes.register("theme_toronto", theme_toronto)
@@ -37,8 +37,8 @@ def test_colours():
     assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD']
     
 def test_font_type():
-    ''' A function that tests the correct fonts are imported into the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has font type imported from the U of T theme applied to it 
+    adhering to the university's visual identity'''
 
     # call the theme function to enforce themes on all subsequent plots 
     alt.themes.register("theme_toronto", theme_toronto)
@@ -52,8 +52,8 @@ def test_font_type():
     assert plot_dict['config']['axisY']['titleFont'] == 'Tahoma'
     
 def test_font_size():
-    ''' A function that tests the correct fonts sizes are used in the 
-    altair chart based on the theme'''
+    ''' A function that tests if an altair chart has font size imported from the U of T theme applied to it 
+    adhering to the university's visual identity'''
 
     # call the theme function to enforce themes on all subsequent plots 
     alt.themes.register("theme_toronto", theme_toronto)
