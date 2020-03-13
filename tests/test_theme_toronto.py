@@ -33,9 +33,14 @@ def test_colours():
     # call the theme function to enforce themes on all subsequent plots 
     alt.themes.register("theme_toronto", theme_toronto)
     alt.themes.enable("theme_toronto")
-    
     plot_dict = test_plot.to_dict()
-    assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD']
+    
+    try:
+        assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD']
+        
+    except EnableError:
+        assert plot_dict['config']['range']['category'] != ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+
     
 def test_font_type():
     ''' A function that tests if an altair chart has font type imported from the U of T theme applied to it 
@@ -69,28 +74,26 @@ def test_font_size():
     
 # defensive tests, expect failure
 
-def wrong_colour():
-    ''' A function that checks if the correct colours are used,
-    shoud fail'''
+# def wrong_colour():
+#     ''' A function that checks if the correct colours are used,
+#     shoud fail'''
 
-    alt.themes.register("theme_mcgill", theme_mcgill)
-    alt.themes.enable("theme_mcgill")  
+#     alt.themes.register("theme_mcgill", theme_mcgill)
+#     alt.themes.enable("theme_mcgill")  
     
-    plot_dict = test_plot.to_dict()
-    with pytest.raises(Exception):
-        assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+#     plot_dict = test_plot.to_dict()
+#     assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
     
-def wrong_font():
-    ''' A function that tests the if correct fonts are used,
-    shoud fail'''
+# def wrong_font():
+#     ''' A function that tests the if correct fonts are used,
+#     shoud fail'''
 
-    alt.themes.register("theme_mcgill", theme_mcgill)
-    alt.themes.enable("theme_mcgill")    
+#     alt.themes.register("theme_mcgill", theme_mcgill)
+#     alt.themes.enable("theme_mcgill")    
 
-    plot_dict = test_plot.to_dict()
-    with pytest.raises(Exception):
-        assert plot_dict['config']['title']['font'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-        assert plot_dict['config']['axisX']['labelFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-        assert plot_dict['config']['axisX']['titleFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-        assert plot_dict['config']['axisY']['labelFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-        assert plot_dict['config']['axisY']['titleFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+#     plot_dict = test_plot.to_dict()
+#     assert plot_dict['config']['title']['font'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+#     assert plot_dict['config']['axisX']['labelFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+#     assert plot_dict['config']['axisX']['titleFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+#     assert plot_dict['config']['axisY']['labelFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
+#     assert plot_dict['config']['axisY']['titleFont'] == 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
