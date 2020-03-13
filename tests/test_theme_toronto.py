@@ -72,19 +72,12 @@ def wrong_colour():
     ''' A function that checks if the correct colours are used,
     shoud fail'''
     
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
-    
     plot_dict = test_plot.to_dict()
     assert plot_dict['config']['range']['category'] != ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
     
 def wrong_font():
     ''' A function that tests the if correct fonts are used,
     shoud fail'''
-    
-    # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
 
     plot_dict = test_plot.to_dict()
     assert plot_dict['config']['title']['font'] != 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
