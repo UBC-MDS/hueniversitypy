@@ -69,19 +69,12 @@ def wrong_colour():
     ''' A function that checks if the correct colours are used,
     shoud fail'''
     
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
-    
     plot_dict = mcgill_plot.to_dict()
     assert plot_dict['config']['range']['category'] != ["#ED1B2F","#FFD794","#B5E1E1","#C8EAF5","#D5E6A8"], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
     
 def wrong_font():
     ''' A function that tests the if correct fonts are used,
     shoud fail'''
-    
-    # call the theme function to enforce themes on all subsequent plots 
-    alt.themes.register("theme_toronto", theme_toronto)
-    alt.themes.enable("theme_toronto")
 
     plot_dict = mcgill_plot.to_dict()
     assert plot_dict['config']['title']['font'] != 'Lato', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_mcgill", theme_mcgill) \n>>> alt.themes.enable("theme_mcgill")'
