@@ -15,10 +15,11 @@ def theme_alberta():
     >>> alt.themes.enable('theme_alberta')
 
     """
-    
+
     # Code attribution: Sergio Sanchez
     # https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
 
+    # University font
     font = "Arial"
     labelFont = "Arial"
 
@@ -27,12 +28,14 @@ def theme_alberta():
 
     return {
         "config": {
+            # Title font and size
             "title": {
                 "fontSize" : 18,
                 "font": font,
                 "anchor": "start",
                 "fontColor": "#000000"
             } ,
+            # Axes font and sizes
             "axisX": {
                 "labelFont": labelFont,
                 "labelFontSize": 12,
@@ -47,9 +50,9 @@ def theme_alberta():
                 "titleFontSize": 12,
                 "title": "Y Axis Title (units)"
             },
+            # Add colour palette
             "range": {
                 "category": alberta_palette
             }
         }
     }
-
