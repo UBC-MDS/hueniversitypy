@@ -2,7 +2,14 @@
 name = "hueniversitypy"
 version = "0.1.1"
 description = "Python Package for Visualization by Themes for Canadian Universities"
-authors = ["Shivam Verma <vermashivam679@gmail.com>"]
+authors = ["evelynmoorhouse <evelyn.moorhouse@mail.utoronto.ca>",
+            "rokamoto <reiko.okamoto17@gmail.com>",
+            "SimardeepKaur <simardeep.kaur.jeji@gmail.com>",
+            "vermashivam679 <vermashivam679@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/UBC-MDS/hueniversitypy"
+repository = "https://github.com/UBC-MDS/hueniversitypy"
+documentation = 'https://hueniversitypy.readthedocs.io'
 
 [tool.poetry.dependencies]
 python = "^3.7"
