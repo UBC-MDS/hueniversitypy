@@ -35,7 +35,7 @@ def test_colours():
     
     plot_dict = test_plot.to_dict()
     assert plot_dict['config']['range']['category'] == ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD']
-    
+
 def test_font_type():
     ''' A function that tests if an altair chart has font type imported from the U of T theme applied to it 
     adhering to the university's visual identity'''
@@ -66,22 +66,3 @@ def test_font_size():
     assert plot_dict['config']['axisY']['labelFontSize'] == 12
     assert plot_dict['config']['axisY']['titleFontSize'] == 12
     
-# defensive tests, expect failure
-
-def wrong_colour():
-    ''' A function that checks if the correct colours are used,
-    shoud fail'''
-    
-    plot_dict = test_plot.to_dict()
-    assert plot_dict['config']['range']['category'] != ['#002A5C', '#FFE498', '#E31837', '#008BB0', '#DAE5CD'], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-    
-def wrong_font():
-    ''' A function that tests the if correct fonts are used,
-    shoud fail'''
-
-    plot_dict = test_plot.to_dict()
-    assert plot_dict['config']['title']['font'] != 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-    assert plot_dict['config']['axisX']['labelFont'] != 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-    assert plot_dict['config']['axisX']['titleFont'] != 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-    assert plot_dict['config']['axisY']['labelFont'] != 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
-    assert plot_dict['config']['axisY']['titleFont'] != 'Tahoma', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_toronto", theme_toronto) \n>>> alt.themes.enable("theme_toronto")'
