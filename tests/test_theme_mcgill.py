@@ -1,36 +1,35 @@
 import pandas as pd
 import altair as alt
 
-# import theme_mcgill.py file with functions. 
-from hueniversitypy.theme_mcgill import theme_mcgill
-from hueniversitypy.theme_toronto import *
+# import theme_mcgill.py file with functions 
+from hueniversitypy.theme_mcgill import *
 
-# creating data to plot for tests
+
+# create dummy dataframe
 data = pd.melt(pd.DataFrame({'A': [1, 4, 6, 8, 3, 6, 7], 
                  'B':[2, 3, 7, 4, 8, 4, 9], 
                  'C':[3, 6, 3, 5, 8, 2, 8] }))
 
-# creating test plot
+# create test plot
 mcgill_plot = alt.Chart(data).mark_point().encode(
     x='count()',
     y='value',
     color='variable',
 ).properties(title = 'Test')
     
-
-
 def test_chart_object():
-    ''' A function that tests if an altair chart object is created  '''
+    """Tests if an altair chart object is created"""
     
+    # call the theme function to enforce theme on all subsequent plots
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
 
     assert str(type(mcgill_plot)) == f"<class 'altair.vegalite.v{alt.__version__[0]}.api.Chart'>"
     
 def test_colours():
-    ''' A function that tests if an altair chart has colours imported from the McGill theme applied to it 
-    adhering to the university's visual identity'''
+    """Tests if colours from the McGill theme has been applied to chart"""
     
+    # call the theme function to enforce theme on all subsequent plots
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
     
@@ -38,10 +37,9 @@ def test_colours():
     assert plot_dict['config']['range']['category'] == ["#ED1B2F","#FFD794","#B5E1E1","#C8EAF5","#D5E6A8"]
     
 def test_font_type():
-    #
-    ''' A function that tests if an altair chart has font type imported from the McGill theme applied to it 
-    adhering to the university's visual identity'''
+    """Tests if font type from the McGill theme has been applied to chart"""
     
+    # call the theme function to enforce theme on all subsequent plots
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
     
@@ -53,9 +51,9 @@ def test_font_type():
     assert plot_dict['config']['axisY']['titleFont'] == 'Lato'
     
 def test_font_size():
-    ''' A function that tests if an altair chart has font size imported from the McGill theme applied to it 
-    adhering to the university's visual identity'''
+    """Tests if font size from the McGill theme has been applied to chart"""
     
+    # call the theme function to enforce theme on all subsequent plots
     alt.themes.register("theme_mcgill", theme_mcgill)
     alt.themes.enable("theme_mcgill")
     
