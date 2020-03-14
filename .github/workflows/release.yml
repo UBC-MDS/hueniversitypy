@@ -39,17 +39,6 @@ jobs:
       with:
         ref: master
         fetch-depth: '0'
-    - name: Bump version and tagging and publish
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git pull origin master
-        poetry run semantic-release version
-        poetry version $(grep "version" */__init__.py | cut -d "'" -f 2 | cut -d '"' -f 2)
-        git commit -m "Add changes" -a
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DEBUG: semantic_release.*
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:

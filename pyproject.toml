@@ -23,3 +23,5 @@ version_variable = "hueniversitypy/__init__.py:__version__"
 version_source = "commit"
 upload_to_pypi = "false"
 patch_without_tag = "true"
+
+
