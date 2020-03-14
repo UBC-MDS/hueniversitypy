@@ -12,31 +12,28 @@ def theme_mcgill():
     ----------
     >>> alt.themes.register('theme_mcgill', theme_mcgill)
     >>> alt.themes.enable('theme_mcgill')
-
+    
     """
-    #attribution to Sergio Sanchez 
-    #https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
-
+    # Code attribution: Sergio Sanchez
+    # https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
 
     # University font
     font = "Lato"
     labelFont = "Lato" 
-    sourceFont = "Lato"
-    # Axes
-    axisColor = "#000000"
-    gridColor = "#DEDDDD"
-    # Colors
+
+    # Specify colour palette for McGill
     main_palette = ["#ED1B2F","#FFD794","#B5E1E1","#C8EAF5","#D5E6A8",]
 
     return {
         "config": {
+            # Title font and size
             "title": {
                 "fontSize": 18,
                 "font": font,
                 "anchor": "start", 
                 "fontColor": "#000000"
             },
-            # Axes fonts and sizes
+            # Axes font and sizes
             "axisX": {
                 "labelFont": labelFont,
                 "labelFontSize": 12,
@@ -52,12 +49,9 @@ def theme_mcgill():
                 "titleFontSize": 12
 
             },
-             # Adding colour palette
+             # Add colour palette
             "range": {
-                
                 "category": main_palette,
             }
+        }
     }
-    }
-
-    

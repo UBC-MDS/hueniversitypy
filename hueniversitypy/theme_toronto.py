@@ -15,32 +15,28 @@ def theme_toronto():
     >>> alt.themes.register('theme_toronto', theme_toronto)
     >>> alt.themes.enable('theme_toronto')
 
-    
     """
     
-    # attribution to Sergio Sanchez 
+    # Code attribution: Sergio Sanchez
     # https://towardsdatascience.com/consistently-beautiful-visualizations-with-altair-themes-c7f9f889602
 
-
-    # note U of T fonts are not open source, so most comprable fonts have been used for this package
+    # note U of T fonts are not open source, so the most comparable font has been used for this package
     font = "Tahoma"
-    # note U of T fonts are not open source, so most comprable fonts have been used for this package
     labelFont = "Tahoma" 
-    sourceFont = "Tahoma"
-    # Axes
-    axisColor = "#000000"
-    gridColor = "#DEDDDD"
-    # Colors
+
+    # Specify colour palette for Toronto
     main_palette = ["#002A5C","#FFE498","#E31837","#008BB0","#DAE5CD",]
 
     return {
         "config": {
+            # Title font and size
             "title": {
                 "fontSize": 18,
                 "font": font,
                 "anchor": "start", 
                 "fontColor": "#000000"
             },
+            # Axes font and sizes
             "axisX": {
                 "labelFont": labelFont,
                 "labelFontSize": 12,
@@ -54,12 +50,10 @@ def theme_toronto():
                 "titleFont": font,
                 "titleFontSize": 12,
                 "title": "Y Axis Title (units)", 
- 
             },
-
+            # Add colour palette
             "range": {
-                
                 "category": main_palette,
             }
-    }
+        }
     }
