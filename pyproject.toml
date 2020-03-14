@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hueniversitypy"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python Package for Visualization by Themes for Canadian Universities"
 authors = ["Shivam Verma <vermashivam679@gmail.com>"]
 
