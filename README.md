@@ -31,17 +31,19 @@ pip install -i https://test.pypi.org/simple/ hueniversitypy
 ### Dependencies
 
 - pandas==0.24.2
-- altair==3.2.0 
+- altair==4.0.1 
 
 ### Usage
 
 Start by importing the following packages:
 
 ```
-import hueniversitypy
+from hueniversitypy.theme_alberta import *
+from hueniversitypy.theme_mcgill import *
+from hueniversitypy.theme_toronto import *
+from hueniversitypy.theme_ubc import *
 import altair as alt
 import pandas as pd
-import numpy as np
 from vega_datasets import data
 ```
 ```
