@@ -3,8 +3,6 @@ import altair as alt
 
 # Import theme_alberta.py
 from hueniversitypy.theme_alberta import *
-from hueniversitypy.theme_mcgill import *
-
 
 # Create toy dataframe to plot 
 data = pd.melt(pd.DataFrame({"A": [1, 86, 62, 29, 16, 42, 69],
@@ -68,26 +66,3 @@ def test_font_size_alberta():
     assert plot_dict['config']['axisY']['labelFontSize'] == 12
     assert plot_dict['config']['axisY']['titleFontSize'] == 12
     
-def wrong_colour():
-    ''' A function that checks if the correct colours are used,
-    shoud fail'''
-
-    alt.themes.register("theme_mcgill", theme_mcgill)
-    alt.themes.enable("theme_mcgill")
-
-    plot_dict = alberta_plot.to_dict()
-    assert plot_dict['config']['range']['category'] != ["#007C41", "#FFDB05", "#7D9AAA", "#A8B400", "#A79E70"], 'theme is not enabled, enable with \n>>> alt.themes.register("theme_alberta", theme_alberta) \n>>> alt.themes.enable("theme_alberta")'
-    
-def wrong_font():
-    ''' A function that tests the if correct fonts are used,
-    shoud fail'''
-
-    alt.themes.register("theme_mcgill", theme_mcgill)
-    alt.themes.enable("theme_mcgill")
-
-    plot_dict = alberta_plot.to_dict()
-    assert plot_dict['config']['title']['font'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_alberta", theme_alberta) \n>>> alt.themes.enable("theme_alberta")'
-    assert plot_dict['config']['axisX']['labelFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_alberta", theme_alberta) \n>>> alt.themes.enable("theme_alberta")'
-    assert plot_dict['config']['axisX']['titleFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_alberta", theme_alberta) \n>>> alt.themes.enable("theme_alberta")'
-    assert plot_dict['config']['axisY']['labelFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_alberta", theme_alberta) \n>>> alt.themes.enable("theme_alberta")'
-    assert plot_dict['config']['axisY']['titleFont'] != 'Arial', 'theme is not enabled, enable with \n>>> alt.themes.register("theme_alberta", theme_alberta) \n>>> alt.themes.enable("theme_alberta")'
