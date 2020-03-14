@@ -34,7 +34,7 @@ Python 3.7 and the following Python packages:
 
 | Package | Minimum Version |
 |---------|-----------------|
-| [pandas](https://pandas.pydata.org/) | 0.24.2 |
+| [pandas](https://pandas.pydata.org/) | 1.0.1 |
 | [altair](https://github.com/altair-viz/altair) | 4.0.1 |
 
 ### Usage
