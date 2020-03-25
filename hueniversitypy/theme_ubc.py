@@ -2,6 +2,7 @@ def theme_ubc():
     """ 
     Applies a University of British Columbia theme to all subsequential altair plot objects so they are displayed with the UBC visual identity. 
     See the visual identity at https://brand.ubc.ca/guidelines/downloads/ubc-colour-and-fonts/ 
+    See more details about the package on GitHub: https://github.com/UBC-MDS/hueniversitypy/blob/master/README.md 
 		
     Returns
     -------

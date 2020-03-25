@@ -1,7 +1,8 @@
 def theme_mcgill():
     """ 
     Applies McGill University's theme to all subsequential altair plot objects so they are displayed with the McGill visual identity.
-    See the visual identity at https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo. The 
+    See the visual identity at https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo. 
+    See more details about the package on GitHub: https://github.com/UBC-MDS/hueniversitypy/blob/master/README.md 
      
     Returns
     -------
