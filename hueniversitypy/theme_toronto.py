@@ -12,8 +12,14 @@ def theme_toronto():
 
     Example
     ----------
+    >>> from hueniversitypy.theme_toronto import *
+    >>> data = pandas.DataFrame({'X': numpy.random.randint(100, size=100), 
+                                'Y': numpy.random.randint(100, size=100), 
+                                'Cat': [['A', 'B', 'C'][numpy.random.randint(3, size=1)[0]] for i in range(100)]})
+    >>> scatterplot = (altair.Chart(data).mark_circle(size=60, opacity=0.5).encode(x='X', y='Y', color='Cat'))
     >>> alt.themes.register('theme_toronto', theme_toronto)
     >>> alt.themes.enable('theme_toronto')
+    >>> scatterplot
 
     """
     

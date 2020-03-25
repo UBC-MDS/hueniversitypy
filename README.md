@@ -14,7 +14,7 @@ This Python package allows users to apply university-specific themes to altair p
 
 ### hueniversitypy in the Python ecosystem
 
-The hueniversitypy package fits into the Python ecosystem alongisde other Python packages that allow users to change the theme of plot objects. This package is different from others as it utilizes the altair visualization package rather than other types of visualization packages. Currently, there are very few packages in the Python ecosystem that apply themes to altair plots, as described in this [GitHub issue]( https://github.com/altair-viz/altair/issues/1333). One package that is designed to change the theme of altair plots for the Los Angeles Times publications can be found [here](https://github.com/datadesk/altair-latimes). Our package will be different as the goal of the change in plot theme is to adhere to certain university visual identities, rather than the Los Angeles Times colour theme.  
+The hueniversitypy package fits into the Python ecosystem alongside other Python packages that allow users to change the theme of plot objects. This package is different from others as it utilizes the altair visualization package rather than other types of visualization packages. Currently, there are very few packages in the Python ecosystem that apply themes to altair plots, as described in this [GitHub issue]( https://github.com/altair-viz/altair/issues/1333). One package that is designed to change the theme of altair plots for the Los Angeles Times publications can be found [here](https://github.com/datadesk/altair-latimes). Our package will be different as the goal of the change in plot theme is to adhere to certain university visual identities, rather than the Los Angeles Times colour theme.  
 
 ### Installation:
 
