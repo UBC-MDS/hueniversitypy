@@ -3,6 +3,8 @@ def theme_toronto():
     Applies a University of Toronto theme to all subsequential altair plot objects so they are displayed with the U of T visual identity. 
     See the visual identity at https://tinyurl.com/t3jjr49
     Three palettes based on the U of T visual identity guidelines can be selected: 'cool', 'vibrant' and 'awards'. 
+    See more details about the package on GitHub: https://github.com/UBC-MDS/hueniversitypy/blob/master/README.md 
+
 
 	
     Returns
@@ -12,9 +14,14 @@ def theme_toronto():
 
     Example
     ----------
+    >>> from hueniversitypy.theme_toronto import *
+    >>> data = pandas.DataFrame({'X': numpy.random.randint(100, size=100), 
+                                'Y': numpy.random.randint(100, size=100), 
+                                'Cat': [['A', 'B', 'C'][numpy.random.randint(3, size=1)[0]] for i in range(100)]})
+    >>> scatterplot = (altair.Chart(data).mark_circle(size=60, opacity=0.5).encode(x='X', y='Y', color='Cat'))
     >>> alt.themes.register('theme_toronto', theme_toronto)
     >>> alt.themes.enable('theme_toronto')
-
+    >>> scatterplot
     """
     
     # Code attribution: Sergio Sanchez

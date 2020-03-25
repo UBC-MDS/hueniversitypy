@@ -1,7 +1,8 @@
 def theme_mcgill():
     """ 
     Applies McGill University's theme to all subsequential altair plot objects so they are displayed with the McGill visual identity.
-    See the visual identity at https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo. The 
+    See the visual identity at https://mcgill.ca/visual-identity/visual-identity-guide#mcgilllogo. 
+    See more details about the package on GitHub: https://github.com/UBC-MDS/hueniversitypy/blob/master/README.md 
      
     Returns
     -------
@@ -10,8 +11,14 @@ def theme_mcgill():
 
     Example
     ----------
+    >>> from hueniversitypy.theme_mcgill import *
+    >>> data = pandas.DataFrame({'X': numpy.random.randint(100, size=100), 
+                                'Y': numpy.random.randint(100, size=100), 
+                                'Cat': [['A', 'B', 'C'][numpy.random.randint(3, size=1)[0]] for i in range(100)]})
+    >>> scatterplot = (altair.Chart(data).mark_circle(size=60, opacity=0.5).encode(x='X', y='Y', color='Cat'))
     >>> alt.themes.register('theme_mcgill', theme_mcgill)
     >>> alt.themes.enable('theme_mcgill')
+    >>> scatterplot
     
     """
     # Code attribution: Sergio Sanchez
