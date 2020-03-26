@@ -37,6 +37,26 @@ Python 3.7 and the following Python packages:
 | [pandas](https://pandas.pydata.org/) | 1.0.1 |
 | [altair](https://github.com/altair-viz/altair) | 4.0.1 |
 
+### Documentation
+
+The official documentation is hosted on [Read the Docs](https://readthedocs.org/): https://hueniversitypy.readthedocs.io/en/latest/?badge=latest
+
+### Citation
+
+Reiko Okamoto, Shivam Verma, Simardeep Kaur & Evelyn Moorhouse. hueniversitypy, (2020), GitHub repository, https://github.com/UBC-MDS/hueniversitypy
+
+Bibtex: 
+```
+@misc{
+  authors = {Reiko Okamoto, Shivam Verma, Simardeep Kaur, Evelyn Moorhouse},
+  title = {hueniversitypy},
+  year = {2020},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/UBC-MDS/hueniversitypy}},
+} 
+```
+
 ### Usage
 
 Start by importing the following packages:
@@ -170,9 +190,6 @@ barplot
 ```
 <img src="imgs/ubc-bar.png" width="50%" />
 
-
-### Documentation
-The official documentation is hosted on Read the Docs: <https://hueniversitypy.readthedocs.io/en/latest/>
 
 ### Credits
 This package was created with Cookiecutter and the UBC-MDS/cookiecutter-ubc-mds project template, modified from the [pyOpenSci/cookiecutter-pyopensci](https://github.com/pyOpenSci/cookiecutter-pyopensci) project template and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage).
